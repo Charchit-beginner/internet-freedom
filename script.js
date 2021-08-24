@@ -6,7 +6,7 @@ var re = ["hi","hello","what's up","Richard Stallman is an American Activist and
     chat_pop.addEventListener("click", () => {
         fadeIn(document.querySelector(".chat-card"))
     })
-    document.querySelector(".close").addliveEventListener("click", (e) => {
+    document.querySelector(".close").addEventListener("click", (e) => {
         fadeOut(document.querySelector(".chat-card"))
         console.log("hi")
     })
@@ -51,7 +51,8 @@ var re = ["hi","hello","what's up","Richard Stallman is an American Activist and
 
     	}
     })
-    var typed = new Typed(".element", {
+    try{
+        var typed = new Typed(".element", {
   strings: [
     "",
     "has right to internet",
@@ -61,6 +62,11 @@ var re = ["hi","hello","what's up","Richard Stallman is an American Activist and
   backSpeed: 10,
   loop: true,
 })
+    }
+    catch{
+    console.log("e")      
+    }
+    
 }
 
 function append(pos, msg) {
