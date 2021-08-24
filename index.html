@@ -17,14 +17,14 @@
 
   <nav class="navbar navbar-expand-sm navbar-dark ">
     <div class="container-fluid nav-main">
-      <a class="navbar-brand ms-5" href="#">Internet Freedom</a>
+      <a class="navbar-brand ms-5" href="index.html">Internet Freedom</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse text-center flex-grow-0 text-light align-items-center" id="navbarColor02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/"><i class="fa fa-home me-1"></i>HOME</a>
+            <a class="nav-link active" aria-current="page" href="index.html"><i class="fa fa-home me-1"></i>HOME</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="about.html"><i class="fa fa-user me-1"></i>ABOUT</a>
@@ -43,7 +43,7 @@
             <div class="container position-relative px-4 px-lg-5">
                         <div class="text-center">
                             <h1>Internet Freedom</h1>
-                            <span class="subheading">Everyone has <span class="element"></span></span>
+                            <span class="subheading">Everyone  <span class="element"></span></span>
                     </div>
             </div>
         </header>
@@ -119,7 +119,7 @@
         <div class="header mb-0" style="background-image: url('https://media.discordapp.net/attachments/879288184444452895/879708765564321802/Free-Software-apps-icon4.png');">
         </div>
        <div class="container my-4">
-        <div class="row">
+        <div class="row cards-dek">
           <div class="col-sm my-3 mx-2 " data-aos="fade-in" data-aos-duration="2000">
     <div class="card mx-auto quote last-col" style="width: 18rem;">
  
@@ -200,5 +200,21 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
 <script src="script.js" type="text/javascript" charset="utf-8" ></script>
+<script>
+  function myFunction(x)  {
+  rows = document.querySelectorAll(".cards-dek")
+      rows.forEach(e => {
+    if (x.matches){
+        e.classList.remove("row")
+    }
+    else{
+      e.classList.remove("row") 
+    }
+    });
+    }
+var x = window.matchMedia("(max-width: 575px)")
+myFunction(x)
+x.addListener(myFunction)
+</script>
   </body>
 </html>
